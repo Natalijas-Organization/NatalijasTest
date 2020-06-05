@@ -1,0 +1,17 @@
+ID: MyFirstProject
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: MyFirstProject
+    type: com.sap.application.content
+    path: MyFirstProject
+    requires:
+      - name: workflow
+        parameters:
+          content-target: true
+resources:
+  - name: workflow
+    parameters:
+      service-plan: standard
+      service: workflow
+    type: org.cloudfoundry.existing-service
