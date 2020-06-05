@@ -1,0 +1,18 @@
+ID: test_for_git
+_schema-version: '2.1'
+description: test for git
+version: 0.0.1
+modules:
+  - name: test_for_git
+    type: com.sap.application.content
+    path: test_for_git
+    requires:
+      - name: workflow
+        parameters:
+          content-target: true
+resources:
+  - name: workflow
+    parameters:
+      service-plan: standard
+      service: workflow
+    type: org.cloudfoundry.existing-service
